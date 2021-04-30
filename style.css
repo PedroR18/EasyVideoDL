@@ -1,0 +1,246 @@
+* {
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title img {
+  height: 15vmin;
+  width: auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 70px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-left: 1em;
+  background-color: transparent;
+  padding: 0.8em;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s;
+}
+
+.score {
+  margin: 0.5em;
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.final-score {
+  display: flex;
+  flex-direction: row;
+  border-left: black 3px solid;
+}
+
+.top-score {
+  display: flex;
+  flex-direction: row;
+}
+
+.score p {
+  font-size: 1.5em;
+  margin: 0.3em;
+}
+
+.pick {
+  height: 60vmin;
+  width: 55vmin;
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  border: 5px black solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+
+.pick img {
+  height: 20vmin;
+  width: auto;
+  border: solid white 2px;
+  border-radius: 10px;
+}
+
+.players {
+  display: flex;
+  height: 50vmin;
+  margin: 2em;
+  padding: 1em;
+  border: 2px white solid;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.players li {
+  list-style: none;
+}
+
+li {
+  font-size: 1.2em;
+}
+
+li:first-child {
+  font-size: 1.8em;
+}
+
+.player-pick {
+  height: 15vmin;
+  width: 12vmin;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.eleven {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 0.5em;
+  background-image: url(images/field.jpg);
+  height: 98vmin;
+  width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player-pick {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 103, 103, 0.3) 100%
+  );
+  text-align: center;
+}
+
+.player-pick p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.player-pick img {
+  height: 10vmin;
+  width: auto;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.player-pick:hover {
+  background-color: red;
+  transition: 0.2s;
+}
+
+.gr {
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+}
+
+.de {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+}
+
+.dce {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
+.dcd {
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+}
+
+.dd {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+}
+
+.mdf {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.me {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.md {
+  grid-column: 5 / 6;
+  grid-row: 3 / 4;
+}
+
+.mo {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.pld {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.ple {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+.error {
+  position: absolute;
+  font-size: 5em;
+}
