@@ -130,7 +130,8 @@ const gr = [
     games: "7",
     goals: "0",
     power: 27,
-    photo_url: "https://static-img.zz.pt/jogadores/42/299342_rui_nereu.jpg",
+    photo_url:
+      "http://1.bp.blogspot.com/_AQ6G152jKNk/TRHhN_rOA-I/AAAAAAAAACs/jaTM6qS3y5s/s1600/nereu.jpg",
   }),
   (bossio = {
     name: "Carlos Bossio",
@@ -160,7 +161,7 @@ const de = [
     goals: "8",
     power: 80,
     photo_url:
-      "https://static-img.zz.pt/jogadores/71/19171_20210112151201_fabio_coentrao.jpg",
+      "https://ohomeminvisivel.com/wp-content/uploads/2015/06/fabio-coentrao.jpg",
   }),
   (cortez = {
     name: "Bruno Cortez",
@@ -178,7 +179,7 @@ const de = [
     goals: "2",
     power: 78,
     photo_url:
-      "https://static-img.zz.pt/jogadores/15/5615_20210402044617_leo.png",
+      "https://serbenfiquista.com/sites/default/files/styles/large/public/10725696_orvvf3npxr.jpeg?itok=UDSVWMyq",
   }),
   (grimaldo = {
     name: "Grimaldo",
@@ -196,7 +197,7 @@ const de = [
     goals: "4",
     power: 74,
     photo_url:
-      "https://static-img.zz.pt/jogadores/43/43_20190519014044_eliseu.jpg",
+      "https://www.bolanarede.pt/wp-content/uploads/2017/01/eliseu.jpg",
   }),
   (siqueira = {
     name: "Siqueira",
@@ -230,9 +231,9 @@ const de = [
     season: "2011-2012",
     games: "12",
     goals: "0",
-    power: 38,
+    power: 55,
     photo_url:
-      "https://static-img.zz.pt/jogadores/34/834_20161027182920_joan_capdevila.jpg",
+      "https://www.zerozero.pt/img/jogadores/57/320057_med__20160219113843_joan_capdevila.png",
   }),
   (cesarpeixoto = {
     name: "César Peixoto",
@@ -379,7 +380,7 @@ const dc = [
     goals: "47",
     power: 90,
     photo_url:
-      "https://static-img.zz.pt/jogadores/81/481_20210330152134_luisao.png",
+      "https://img.haikudeck.com/mi/846a9327feffdf3f47dcc09a64ad79b9.jpeg",
   }),
   (humberto = {
     name: "Humberto Coelho",
@@ -397,7 +398,7 @@ const dc = [
     goals: "13",
     power: 85,
     photo_url:
-      "https://static-img.zz.pt/jogadores/70/155270_20200930091049_ruben_dias.png",
+      "https://m.footballdatabase.eu/images/photos/players/2019-2020/a_248/248295.jpg",
   }),
   (roderick = {
     name: "Roderick Miranda",
@@ -406,7 +407,7 @@ const dc = [
     goals: "0",
     power: 42,
     photo_url:
-      "https://static-img.zz.pt/jogadores/24/74724_20210201153745_roderick_miranda.jpg",
+      "https://www.bolanarede.pt/wp-content/uploads/2017/02/roderick-miranda.jpg",
   }),
   (mozer = {
     name: "Carlos Mozer",
@@ -451,7 +452,7 @@ const dc = [
     goals: "4",
     power: 67,
     photo_url:
-      "https://static-img.zz.pt/jogadores/68/214368_20210205154515_ferro.png",
+      "https://i.pinimg.com/originals/79/80/0a/79800a91f82120d6fb74761a5a120e01.png",
   }),
   (lindelof = {
     name: "Lindelof",
@@ -487,7 +488,7 @@ const dc = [
     goals: "1",
     power: 36,
     photo_url:
-      "https://static-img.zz.pt/jogadores/80/8880_20190425132658_marco_zoro.jpg",
+      "http://3.bp.blogspot.com/-mebjA4h7Kck/TeusV_wyxDI/AAAAAAAABG8/PXe_D00GooM/s1600/104302.jpg",
   }),
   (alcides = {
     name: "Alcides",
@@ -504,7 +505,8 @@ const dc = [
     games: "73",
     goals: "5",
     power: 70,
-    photo_url: "https://static-img.zz.pt/jogadores/44/5144_anderson_.jpg",
+    photo_url:
+      "http://2.bp.blogspot.com/-XupI0rZ8eV4/T5o3pUOZr4I/AAAAAAAAG88/9dyw2AigRhg/s1600/anderson.jpg",
   }),
   (argel = {
     name: "Argel",
@@ -621,8 +623,7 @@ const mdf = [
     games: "39",
     goals: "0",
     power: 30,
-    photo_url:
-      "https://static-img.zz.pt/jogadores/58/42658_20201226224209_gilles_binya.png",
+    photo_url: "https://www.bdfutbol.com/i/j/77279.jpg",
   }),
   (petit = {
     name: "Petit",
@@ -666,7 +667,7 @@ const mdf = [
     goals: "1",
     power: 33,
     photo_url:
-      "https://static-img.zz.pt/jogadores/18/30318_20210424015012_michael_thomas.png",
+      "https://i.pinimg.com/originals/43/44/0d/43440d2bfa9e878289d18e15bf68b565.jpg",
   }),
   (paulobento = {
     name: "Paulo Bento",
@@ -683,7 +684,7 @@ const mdf = [
     goals: "10",
     power: 84,
     photo_url:
-      "https://static-img.zz.pt/jogadores/38/14738_20201228180641_stefan_schwarz.png",
+      "https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=OWY2Omdfz12wCIT6gEYGJgBBIBbG7c9dgNt0hfKxDfLjh6WEo6ItKMzXGM3ymKfWvDAHwUveUOkAtKk0G1Wy1SqSfvwYrke2m4H3MQjr9nbeNCc=",
   }),
   (paulosousa = {
     name: "Paulo Sousa",
@@ -774,7 +775,7 @@ const mo = [
     goals: "2",
     power: 78,
     photo_url:
-      "https://static-img.zz.pt/jogadores/84/155284_20210411153412_renato_sanches.png",
+      "https://tmssl.akamaized.net/images/portrait/originals/258027-1502276477.jpg",
   }),
   (enzo = {
     name: "Enzo Perez",
@@ -819,7 +820,7 @@ const mo = [
     goals: "3",
     power: 54,
     photo_url:
-      "https://static-img.zz.pt/jogadores/81/6181_20190915135915_andrei_karyaka.jpg",
+      "https://imagens.publico.pt/imagens.aspx/218453?tp=UH&db=IMAGENS&type=JPG&w=320&act=resize",
   }),
   (manuelfernandes = {
     name: "Manuel Fernandes",
@@ -828,7 +829,7 @@ const mo = [
     goals: "4",
     power: 71,
     photo_url:
-      "https://static-img.zz.pt/jogadores/41/2741_20210409011816_manuel_fernandes.png",
+      "https://serbenfiquista.com/sites/default/files/styles/large/public/gettyimages-660841610-1024x1024.jpg?itok=N3SPMuCT",
   }),
   (zahovic = {
     name: "Zahovic",
@@ -836,8 +837,7 @@ const mo = [
     games: "102",
     goals: "20",
     power: 82,
-    photo_url:
-      "https://static-img.zz.pt/jogadores/58/58_20210324002256_zlatko_zahovic.png",
+    photo_url: "https://www.foradejogo.net/images/players/197102010001/255.jpg",
   }),
   (joaopinto = {
     name: "João Vieira Pinto",
@@ -855,7 +855,7 @@ const mo = [
     goals: "29",
     power: 84,
     photo_url:
-      "https://static-img.zz.pt/jogadores/33/5133_20201231210246_valdo.png",
+      "https://i.pinimg.com/originals/6e/df/4f/6edf4fa97fbaf64441b0039ca94ef160.jpg",
   }),
 ];
 
@@ -894,7 +894,7 @@ const me = [
     goals: "9",
     power: 62,
     photo_url:
-      "https://static-img.zz.pt/jogadores/99/161399_20201122183225_ola_john.jpg",
+      "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQaOh3QR34jZOsB3o_WGazvsflryBc2urKR3vf0AaAg7z85dkx6Ihyf3sufj25J",
   }),
   (cervi = {
     name: "Franco Cervi",
@@ -921,7 +921,7 @@ const me = [
     goals: "13",
     power: 73,
     photo_url:
-      "https://static-img.zz.pt/jogadores/38/586638__20190713234410_bruno_cesar.jpg",
+      "https://serbenfiquista.com/sites/default/files/styles/large/public/brunocsar1utsk8.jpg?itok=oBT1q1SN",
   }),
   (nolito = {
     name: "Nolito",
@@ -929,8 +929,7 @@ const me = [
     games: "63",
     goals: "16",
     power: 75,
-    photo_url:
-      "https://static-img.zz.pt/jogadores/57/135957_20210128152957_nolito.png",
+    photo_url: "https://www.zerozero.pt/img/geral/79785_med_.jpg.jpg",
   }),
   (balboa = {
     name: "Javier Balboa",
@@ -948,7 +947,7 @@ const me = [
     goals: "7",
     power: 69,
     photo_url:
-      "https://static-img.zz.pt/jogadores/70/6870_20210424041041_cristian_rodriguez.jpg",
+      "https://www.football-pictures.net/data/media/192/Cristian-Rodriguez-benfica.jpg",
   }),
   (sabry = {
     name: "Sabry",
@@ -957,7 +956,7 @@ const me = [
     goals: "9",
     power: 81,
     photo_url:
-      "https://static-img.zz.pt/jogadores/41/141_20210128024706_abdel_sabry.png",
+      "https://i.pinimg.com/originals/f9/4e/36/f94e3617890d4cfa427197546ac7efdf.jpg",
   }),
   (futre = {
     name: "Paulo Futre",
@@ -966,7 +965,7 @@ const me = [
     goals: "5",
     power: 89,
     photo_url:
-      "https://static-img.zz.pt/jogadores/76/5776_20210105220123_paulo_futre.png",
+      "https://i.pinimg.com/originals/5f/40/04/5f4004474d97151f3b546e25881a1dd5.jpg",
   }),
 ];
 
@@ -1023,7 +1022,7 @@ const md = [
     goals: "3",
     power: 70,
     photo_url:
-      "https://static-img.zz.pt/jogadores/89/175189_pri__20200128185038_andre_carrillo.png",
+      "https://i.pinimg.com/originals/de/95/4e/de954ec8e23edc6e9f90d2d60739fcd9.png",
   }),
   (guedes = {
     name: "Gonçalo Guedes",
@@ -1086,7 +1085,7 @@ const md = [
     goals: "34",
     power: 84,
     photo_url:
-      "https://static-img.zz.pt/jogadores/65/65_20210424003303_simao_sabrosa.png",
+      "https://benficapower.files.wordpress.com/2012/05/simao-sabrosa-benfica.jpg",
   }),
   (geovanni = {
     name: "Geovanni",
@@ -1151,7 +1150,7 @@ const pl = [
     goals: "0",
     power: 17,
     photo_url:
-      "https://static-img.zz.pt/jogadores/46/506946__20180901052322_gonzalo_bergessio.jpg",
+      "https://ugc.kn3.net/i/760x/http://3.bp.blogspot.com/_EEQxSBIXW0Q/R4uwGmB_FPI/AAAAAAAAAAs/BY5usd_0Vug/s320/Lavandina.jpg",
   }),
   (makukula = {
     name: "Makukula",
@@ -1232,7 +1231,7 @@ const pl = [
     goals: "52",
     power: 78,
     photo_url:
-      "https://static-img.zz.pt/jogadores/25/40425_20210127115738_kostas_mitroglou.jpg",
+      "https://i.pinimg.com/originals/4c/dc/1a/4cdc1abd007b82447ef0a03fe8c88ae5.jpg",
   }),
   (lima = {
     name: "Lima",
@@ -1366,7 +1365,7 @@ const pl = [
     goals: "16",
     power: 86,
     photo_url:
-      "https://static-img.zz.pt/jogadores/90/5890_20210313025318_claudio_caniggia.png",
+      "https://i.pinimg.com/originals/8d/c9/18/8dc918957b475538aedffac0344e7c00.jpg",
   }),
   (isaias = {
     name: "Isaías",
@@ -1374,7 +1373,8 @@ const pl = [
     games: "178",
     goals: "71",
     power: 85,
-    photo_url: "https://static-img.zz.pt/jogadores/36/14736_isaias.png",
+    photo_url:
+      "http://3.bp.blogspot.com/_7tsmgYAv2ao/R078FVMBc9I/AAAAAAAAFrM/6wpuFu__4vg/s320/94+95+Benfica+2.jpg",
   }),
   (ruiaguas = {
     name: "Rui Águas",
@@ -1517,6 +1517,18 @@ let gr1,
   pl2,
   pl3,
   pl4;
+const notDone = function () {
+  grDone = false;
+  deDone = false;
+  ddDone = false;
+  dceDone = false;
+  dcdDone = false;
+  mdfDone = false;
+  moDone = false;
+  (meDone = false), (mdDone = false);
+  pleDone = false;
+  pldDone = false;
+};
 
 const generatePlayers = function () {
   gr1 = gr[Math.floor(Math.random() * gr.length)];
@@ -1647,6 +1659,7 @@ const hidePlayers = function () {
 
 btnStart.addEventListener("click", function () {
   showBtns();
+  notDone();
   generatePlayers();
   hidePlayers();
   finalScore.classList.add("hidden");
@@ -2019,7 +2032,7 @@ btnEnd.addEventListener("click", function () {
       finalScore.classList.remove("hidden");
       scoreStars.textContent = "⭐⭐⭐⭐";
       scoreNumber.textContent = totalPower;
-    } else if (totalPower > 90) {
+    } else if (totalPower > 88) {
       finalScore.classList.remove("hidden");
       scoreStars.textContent = "⭐⭐⭐⭐⭐";
       scoreNumber.textContent = totalPower;
