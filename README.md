@@ -16,6 +16,7 @@
 It simplifies downloading videos — including login‑protected course content — with cookie‑based authentication, playlist handling, and auto‑naming.
 
 Includes:
+
 - Step‑by‑step setup for **macOS** and **Windows**
 - A **Bash helper** (`hf-dl.sh`) and **PowerShell helper** (`hf-dl-win.ps1`)
 - Auto‑merging of audio + video streams using **ffmpeg**
@@ -28,6 +29,7 @@ Includes:
 ## 🚀 Quick Start
 
 ### macOS
+
 ```bash
 # Install Homebrew (if needed)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -41,6 +43,7 @@ chmod +x ./hf-dl.sh
 ```
 
 ### Windows (PowerShell)
+
 ```powershell
 # Install tools (Windows 10/11)
 winget install yt-dlp.yt-dlp
@@ -70,6 +73,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ## 1) Install yt‑dlp and ffmpeg
 
 ### macOS (Homebrew recommended)
+
 ```bash
 brew install yt-dlp ffmpeg
 yt-dlp --version
@@ -77,6 +81,7 @@ ffmpeg -version
 ```
 
 ### Windows
+
 ```powershell
 winget install yt-dlp.yt-dlp
 winget install Gyan.FFmpeg
@@ -93,6 +98,7 @@ Alternative package managers: `choco install yt-dlp ffmpeg` (Chocolatey) or `pip
 Install **Get cookies.txt LOCALLY** from the Chrome Web Store.
 
 Steps:
+
 1. Log in to the site (play the video).
 2. Click the 🍪 extension → **Export/Download cookies**.
 3. Save as `cookies.txt` (e.g., in Downloads). Keep it **private**; it contains session tokens.
@@ -104,11 +110,13 @@ Steps:
 ## 3) Example Commands
 
 **Single video (best quality):**
+
 ```bash
 yt-dlp --cookies cookies.txt -f "bestvideo+bestaudio/best"   -o "%(title)s.%(ext)s" "https://example.com/video-url"
 ```
 
 **Entire playlist/course (auto folders + numbering):**
+
 ```bash
 yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best"   -o "%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s"   "https://example.com/course-url"
 ```
@@ -117,10 +125,11 @@ yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best"   -o "
 
 ## 4) Common Issue: Two Files (video‑only + audio‑only)
 
-If you see two separate MP4s (no sound), it means `ffmpeg` is missing.  
+Once you downloaded a video, if you see two separate MP4s instead of just one and your video has no sound, it means `ffmpeg` is missing.  
 Install it and re‑run the command or helper script.
 
 Force merge (optional):
+
 ```bash
 yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 "URL"
 ```
@@ -130,9 +139,11 @@ yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 "URL"
 ## 5) Helper Scripts
 
 ### macOS — `hf-dl.sh`
+
 Interactive Bash script that prompts for URL, cookies path, output folder, and playlist mode.
 
 ### Windows — `hf-dl-win.ps1`
+
 Equivalent PowerShell helper for Windows systems.
 
 > Both scripts ensure optimal quality, correct naming, and automatic merging of video + audio.
@@ -141,18 +152,8 @@ Equivalent PowerShell helper for Windows systems.
 
 ## 📚 Official yt‑dlp Documentation
 
-- GitHub repository: [yt‑dlp/yt‑dlp](https://github.com/yt-dlp/yt-dlp)  
+- GitHub repository: [yt‑dlp/yt‑dlp](https://github.com/yt-dlp/yt-dlp)
 - Full command‑line reference in their README and Wiki.
-
----
-
-## 🏷️ Recommended GitHub Topics
-
-```
-yt-dlp, ffmpeg, video-downloader, macos, windows, bash, powershell, cookies, playlist, automation, scripting
-```
-
-Use these under **“Manage topics”** in your GitHub repository settings to make it easily discoverable.
 
 ---
 
