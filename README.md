@@ -1,11 +1,23 @@
 # EasyVideoDL
 
+> **Note:** The badges below are visible when the file is viewed online (e.g., on GitHub).  
+> If you’re viewing this README locally (offline), they may not display unless you have saved the badge images in the `images/` folder.
+
+<!-- Online badges (for GitHub) -->
+<!--
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tool](https://img.shields.io/badge/tool-yt--dlp-orange)
 ![Language](https://img.shields.io/badge/scripts-Bash%20%7C%20PowerShell-yellow)
+-->
 
-**Authors:** Aco Vidovic and ChatGPT  
+<!-- Offline (local) badges -->
+![Platform](images/platform.png)
+![License](images/license.png)
+![Tool](images/tool.png)
+![Language](images/language.png)
+
+**Author:** Aco Vidovic  
 **License:** MIT
 
 ---
@@ -159,4 +171,4 @@ Equivalent PowerShell helper for Windows systems.
 
 ## 🧾 License
 
-Released under the **MIT License** with attribution to **Aco Vidovic** and **ChatGPT**.
+Released under the **MIT License** with attribution to **Aco Vidovic**.

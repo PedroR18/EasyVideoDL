@@ -72,14 +72,11 @@ Write-Host "`nStarting download...`n"
 if ($IsPl -match '^[yY]$') {
     Write-Host "Mode: Playlist download"
     yt-dlp --cookies "$Cookies" --yes-playlist -f "bestvideo+bestaudio/best" `
-        -o "$OutDir/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s" `
-        "$URL"
+        -o "$OutDir/EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s" ` "$URL"
 }
 else {
     Write-Host "Mode: Single video download"
-    yt-dlp --cookies "$Cookies" -f "bestvideo+bestaudio/best" `
-        -o "$OutDir/%(uploader)s/%(title)s.%(ext)s" `
-        "$URL"
+    yt-dlp --cookies "$Cookies" -f "bestvideo+bestaudio/best" ` -o "$OutDir/EasyVideoDL/%(title)s.%(ext)s" ` "$URL"
 }
 
 ###############################################################################
