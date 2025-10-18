@@ -12,8 +12,8 @@ fi
 
 read -r -p "Delete local EasyVideoDL script(s) in this folder? (y/n) " ans
 if [[ "$ans" =~ ^[yY]$ ]]; then
-  rm -f ./hf-dl.sh
-  echo "Removed hf-dl.sh (if present)."
+  rm -f ./hf-dl.sh ./install-mac.sh ./uninstall-mac.sh
+  echo "Removed EasyVideoDL scripts (if present)."
 fi
 
 echo "Done."

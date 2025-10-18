@@ -1,174 +1,232 @@
 # EasyVideoDL
 
-> **Note:** The badges below are visible when the file is viewed online (e.g., on GitHub).  
-> If you’re viewing this README locally (offline), they may not display unless you have saved the badge images in the `images/` folder.
-
-<!-- Online badges (for GitHub) -->
-<!--
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tool](https://img.shields.io/badge/tool-yt--dlp-orange)
 ![Language](https://img.shields.io/badge/scripts-Bash%20%7C%20PowerShell-yellow)
--->
 
-<!-- Offline (local) badges -->
-![Platform](images/platform.png)
-![License](images/license.png)
-![Tool](images/tool.png)
-![Language](images/language.png)
-
-**Author:** Aco Vidovic  
+**Created by Aco Vidovic with AI assistance from ChatGPT**  
 **License:** MIT
 
 ---
 
-## 📘 About EasyVideoDL
+## 🎬 What Is EasyVideoDL?
 
-**EasyVideoDL** is a cross‑platform (macOS + Windows) video downloader powered by **yt‑dlp** and **ffmpeg**.  
-It simplifies downloading videos — including login‑protected course content — with cookie‑based authentication, playlist handling, and auto‑naming.
+**EasyVideoDL** is a simple, cross‑platform tool (for **macOS** and **Windows**) that helps you download videos — even from **login‑protected websites** — using the powerful open‑source engine [yt‑dlp](https://github.com/yt-dlp/yt-dlp).  
 
-Includes:
+It automates complex terminal commands into an easy guided process. Whether you're downloading a single lecture or an entire online course, EasyVideoDL ensures high‑quality audio + video merging with minimal effort.
 
-- Step‑by‑step setup for **macOS** and **Windows**
-- A **Bash helper** (`hf-dl.sh`) and **PowerShell helper** (`hf-dl-win.ps1`)
-- Auto‑merging of audio + video streams using **ffmpeg**
-- Clear troubleshooting and example commands
-
-> ⚠️ Use only for videos you are authorized to access. Respect site Terms and local law.
+> ⚠️ Always use this tool responsibly and only for videos you are legally authorized to access.
 
 ---
 
-## 🚀 Quick Start
+## ⚡ Quick Start Summary (for Experienced Users)
+
+```bash
+# macOS
+chmod +x ./install-mac.sh && ./install-mac.sh
+./hf-dl.sh
+
+# Windows (PowerShell)
+.\install-win.ps1
+.\hf-dl-win.ps1
+```
+
+> 💡 Full, detailed installation and usage instructions follow below.
+
+---
+
+## 🪄 Step  1  –  Automatic Installation  (Recommended)
+
+If you’re new to command‑line tools, this is the **easiest** way to set up EasyVideoDL.  
+The provided install scripts will automatically install all required tools (yt‑dlp + ffmpeg), set permissions, and prepare the environment.
+
+### 🧩 macOS Installation
+
+Run these commands from the EasyVideoDL folder:
+
+```bash
+chmod +x ./install-mac.sh
+./install-mac.sh
+```
+
+This script will:
+
+1. Install **Homebrew** if it’s not already on your system.  
+2. Use Homebrew to install **yt‑dlp** (video downloader) and **ffmpeg** (for merging audio + video).  
+3. Make the EasyVideoDL helper script (`hf-dl.sh`) executable.  
+
+> ⏳ Installation may take a few minutes the first time you run it.
+
+![Installer running on macOS](images/mac-installer.png)
+
+---
+
+### 🪟 Windows Installation
+
+Run this in **PowerShell** (right‑click your folder → *Open in Terminal* → PowerShell tab):
+
+```powershell
+.\install-win.ps1
+```
+
+This script will:
+
+1. Use **winget** (Windows Package Manager) to install `yt‑dlp` and `ffmpeg`.  
+2. Set PowerShell’s execution policy to allow trusted local scripts.  
+3. Automatically unblock your helper script (`hf-dl-win.ps1`) if it was downloaded from the Internet.
+
+![Installer running on Windows](images/windows-installer.png)
+
+> ✅ When complete, you’ll be ready to run EasyVideoDL immediately.
+
+---
+
+## 🧰 Step  2  –  Manual Installation  (Alternative)
+
+> ⚠️ **Do this only if you skipped Step  1** or prefer to install tools manually.
+
+If you’re comfortable with the command line or already have the prerequisites, you can install them manually instead of using the automatic installer.
+
+### macOS (using Homebrew)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install yt-dlp ffmpeg
+```
+
+### Windows (using winget)
+
+```powershell
+winget install yt-dlp.yt-dlp
+winget install Gyan.FFmpeg
+```
+
+> Once yt‑dlp and ffmpeg are installed, you can skip directly to **Step 3**.
+
+![Manual install example](images/manual-install.png)
+
+---
+
+## ▶️ Step  3  –  Running  EasyVideoDL
+
+After installation (automatic or manual), you can start downloading videos immediately.
 
 ### macOS
 
 ```bash
-# Install Homebrew (if needed)
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install tools
-brew install yt-dlp ffmpeg
-
-# Make the helper executable and run it
-chmod +x ./hf-dl.sh
 ./hf-dl.sh
-```
-
-### Windows (PowerShell)
-
-```powershell
-# Install tools (Windows 10/11)
-winget install yt-dlp.yt-dlp
-winget install Gyan.FFmpeg
-
-# Allow scripts if blocked
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
-# Run helper
-.\hf-dl-win.ps1
-```
-
-> Before running either script, export cookies with **Get cookies.txt LOCALLY** in Chrome and save as `cookies.txt` (e.g., in Downloads).
-
----
-
-## 🧩 Key Features
-
-- ✅ Works on **macOS** and **Windows**
-- 🔑 Handles **login‑protected** videos using exported cookies
-- 🎞️ Merges separate video + audio streams (via **ffmpeg**)
-- 📂 Organizes course playlists into titled folders with numbered lessons
-- 🧠 Minimal commands — fully guided through prompts
-
----
-
-## 1) Install yt‑dlp and ffmpeg
-
-### macOS (Homebrew recommended)
-
-```bash
-brew install yt-dlp ffmpeg
-yt-dlp --version
-ffmpeg -version
 ```
 
 ### Windows
 
 ```powershell
-winget install yt-dlp.yt-dlp
-winget install Gyan.FFmpeg
-yt-dlp --version
-ffmpeg -version
+.\hf-dl-win.ps1
 ```
 
-Alternative package managers: `choco install yt-dlp ffmpeg` (Chocolatey) or `pip install -U yt-dlp`.
+When you run the helper script, it will guide you through a few simple prompts:
+
+1. **Video or Playlist URL** – Paste the video or course URL.  
+2. **Cookies file** – Path to your exported `cookies.txt` (usually from Chrome extension *Get cookies.txt LOCALLY*).  
+3. **Output folder** – Where you’d like your videos saved (default is your Downloads folder).  
+4. **Playlist question** – Choose whether it’s a single video or an entire playlist/course.
+
+![Running EasyVideoDL helper script](images/run-helper.png)
+
+The script will then automatically download the video(s), merge audio and video, and organize them neatly into folders.
+
+**Default folder structure:**  
+```
+Downloads/
+└── EasyVideoDL/
+    ├── My Course Title/
+    │   ├── 001 – Introduction.mp4
+    │   ├── 002 – Lesson 1.mp4
+    │   └── ...
+    └── SingleVideoExample.mp4
+```
 
 ---
 
-## 2) Export Cookies (Chrome)
+## 🧹 Step  4  –  Uninstalling  EasyVideoDL  (Optional)
 
-Install **Get cookies.txt LOCALLY** from the Chrome Web Store.
+If you ever want to remove the tools or cleanup the helper scripts, use the provided uninstallers.
 
-Steps:
-
-1. Log in to the site (play the video).
-2. Click the 🍪 extension → **Export/Download cookies**.
-3. Save as `cookies.txt` (e.g., in Downloads). Keep it **private**; it contains session tokens.
-
-> Safari uses a different cookie storage; Chrome or Firefox are simpler.
-
----
-
-## 3) Example Commands
-
-**Single video (best quality):**
+### macOS
 
 ```bash
-yt-dlp --cookies cookies.txt -f "bestvideo+bestaudio/best"   -o "%(title)s.%(ext)s" "https://example.com/video-url"
+chmod +x ./uninstall-mac.sh
+./uninstall-mac.sh
 ```
 
-**Entire playlist/course (auto folders + numbering):**
+This script removes yt‑dlp and ffmpeg (if installed via Homebrew) and offers to delete local EasyVideoDL files.
+
+### Windows
+
+```powershell
+.\uninstall-win.ps1
+```
+
+This script uninstalls yt‑dlp and ffmpeg (via winget) and optionally removes local EasyVideoDL scripts.
+
+![Uninstaller example](images/uninstall.png)
+
+---
+
+## 🎓 Step  5  –  Example  Commands  (for  Advanced  Users)
+
+Even though the helper scripts handle everything, you can also use yt‑dlp manually.
+
+### Single video  (Highest  Quality)
 
 ```bash
-yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best"   -o "%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s"   "https://example.com/course-url"
+yt-dlp --cookies cookies.txt -f "bestvideo+bestaudio/best" \
+  -o "EasyVideoDL/%(title)s.%(ext)s" \
+  "https://example.com/video-url"
 ```
 
----
-
-## 4) Common Issue: Two Files (video‑only + audio‑only)
-
-Once you downloaded a video, if you see two separate MP4s instead of just one and your video has no sound, it means `ffmpeg` is missing.  
-Install it and re‑run the command or helper script.
-
-Force merge (optional):
+### Entire playlist  (with  auto  folders  +  numbering)
 
 ```bash
-yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 "URL"
+yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best" \
+  -o "EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s" \
+  "https://example.com/course-url"
 ```
 
----
-
-## 5) Helper Scripts
-
-### macOS — `hf-dl.sh`
-
-Interactive Bash script that prompts for URL, cookies path, output folder, and playlist mode.
-
-### Windows — `hf-dl-win.ps1`
-
-Equivalent PowerShell helper for Windows systems.
-
-> Both scripts ensure optimal quality, correct naming, and automatic merging of video + audio.
+![Playlist download example](images/playlist-download.png)
 
 ---
 
-## 📚 Official yt‑dlp Documentation
+## 🧩 Troubleshooting  &  Common  Issues
 
-- GitHub repository: [yt‑dlp/yt‑dlp](https://github.com/yt-dlp/yt-dlp)
-- Full command‑line reference in their README and Wiki.
+### ⚠️ Two separate files (video + audio)
+If you see one MP4 file with no sound and another with only audio, ffmpeg wasn’t detected.  
+➡ Install ffmpeg using the installer scripts or the manual method, then re‑run EasyVideoDL.
+
+### 🔐 PowerShell says “script is not digitally signed”
+If you see this message, run:
+```powershell
+Unblock-File -Path .\hf-dl-win.ps1
+```
+You’ll only need to do this once.
+
+### 🔄 Cookies expired or login required
+Re‑export your `cookies.txt` from Chrome after logging in again.  
+Be sure to use the extension **Get cookies.txt  LOCALLY**, not “Clean” or other variants.
+
+![Chrome cookies export example](images/cookies-export.png)
+
+---
+
+## 📚 Official  Resources
+
+- yt‑dlp GitHub repo: [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)  
+- yt‑dlp Wiki & Command Reference: available on the same page.  
+- ffmpeg Documentation: [https://ffmpeg.org/documentation.html](https://ffmpeg.org/documentation.html)
 
 ---
 
 ## 🧾 License
 
-Released under the **MIT License** with attribution to **Aco Vidovic**.
+Released under the **MIT License**.  
+**Created  by  Aco  Vidovic  with  AI  assistance  from  ChatGPT.**
