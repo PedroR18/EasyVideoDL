@@ -17,9 +17,9 @@ fi
 echo "Installing yt-dlp and ffmpeg..."
 brew install yt-dlp ffmpeg
 
-if [[ -f "./hf-dl.sh" ]]; then
-  chmod +x ./hf-dl.sh
-  echo "Made hf-dl.sh executable."
+if [[ -f "./run-evd.sh" ]]; then
+  chmod +x ./run-evd.sh
+  echo "Made run-evd.sh executable."
 fi
 
-echo "Done. Run: ./hf-dl.sh"
+echo "Done. Run: ./run-evd.sh"

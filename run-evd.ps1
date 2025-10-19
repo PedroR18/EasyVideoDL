@@ -1,5 +1,8 @@
-<# EasyVideoDL Windows Helper (auto-detect ffmpeg) #>
+﻿<# EasyVideoDL Windows helper
+   Run: .\run-evd.ps1
+#>
 
+# Prompt for inputs
 $URL = Read-Host "Video or playlist URL"
 
 $DefaultCookies = Join-Path $HOME "Downloads\cookies.txt"
@@ -23,18 +26,42 @@ if (-not $ffmpegCmd) {
     $ffmpegFlag = "--ffmpeg-location `"$ffbin`""
     Write-Host "Using ffmpeg at: $ffbin"
   } else {
-    Write-Warning "ffmpeg not found. yt-dlp may fail to merge audio+video."
+    Write-Warning "ffmpeg not found on PATH. yt-dlp may fail to merge audio+video."
   }
 }
 
-Write-Host "`nStarting download...`n"
+Write-Host ""
+Write-Host "Starting download..." -ForegroundColor Cyan
+Write-Host ""
 
+# Ensure output subfolder base exists
+$evdBase = Join-Path $OutDir "EasyVideoDL"
+if (-not (Test-Path $evdBase)) { New-Item -ItemType Directory -Path $evdBase | Out-Null }
+
+# Build and run yt-dlp command
 if ($IsPl -match '^[yY]$') {
   Write-Host "Mode: Playlist download"
-  iex "yt-dlp $ffmpegFlag --cookies `"$Cookies`" --yes-playlist -f `"bestvideo+bestaudio/best`" -o `"$OutDir/EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s`" `"$URL`""
-} else {
+  $cmd = @(
+    "yt-dlp", $ffmpegFlag,
+    "--cookies", "`"$Cookies`"",
+    "--yes-playlist",
+    "-f", "`"bestvideo+bestaudio/best`"",
+    "-o", "`"$OutDir/EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s`"",
+    "`"$URL`""
+  ) -join " "
+  iex $cmd
+}
+else {
   Write-Host "Mode: Single video download"
-  iex "yt-dlp $ffmpegFlag --cookies `"$Cookies`" -f `"bestvideo+bestaudio/best`" -o `"$OutDir/EasyVideoDL/%(title)s.%(ext)s`" `"$URL`""
+  $cmd = @(
+    "yt-dlp", $ffmpegFlag,
+    "--cookies", "`"$Cookies`"",
+    "-f", "`"bestvideo+bestaudio/best`"",
+    "-o", "`"$OutDir/EasyVideoDL/%(title)s.%(ext)s`"",
+    "`"$URL`""
+  ) -join " "
+  iex $cmd
 }
 
-Write-Host "`nDone. Files saved to: $OutDir\EasyVideoDL`n"
+Write-Host ""
+Write-Host "Done. Files saved to: $OutDir\EasyVideoDL" -ForegroundColor Green

@@ -16,10 +16,14 @@ read -r IS_PL
 
 if [[ "${IS_PL}" == "y" || "${IS_PL}" == "Y" ]]; then
   echo "Downloading playlist..."
-  yt-dlp --cookies "$COOKIES" --yes-playlist -f "bestvideo+bestaudio/best"     -o "${OUTDIR}/EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s"     "$URL"
+  yt-dlp --cookies "$COOKIES" --yes-playlist -f "bestvideo+bestaudio/best" \
+    -o "${OUTDIR}/EasyVideoDL/%(playlist_title)s/%(playlist_index)03d - %(title)s.%(ext)s" \
+    "$URL"
 else
   echo "Downloading single video..."
-  yt-dlp --cookies "$COOKIES" -f "bestvideo+bestaudio/best"     -o "${OUTDIR}/EasyVideoDL/%(title)s.%(ext)s"     "$URL"
+  yt-dlp --cookies "$COOKIES" -f "bestvideo+bestaudio/best" \
+    -o "${OUTDIR}/EasyVideoDL/%(title)s.%(ext)s" \
+    "$URL"
 fi
 
 echo "Download completed successfully."

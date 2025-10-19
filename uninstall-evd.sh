@@ -16,12 +16,12 @@ else
   echo "Keeping yt-dlp and ffmpeg."
 fi
 
-# 2) Ask to remove local EasyVideoDL project scripts (both macOS & Windows scripts) and docs
+# 2) Ask to remove local EasyVideoDL project scripts and docs
 read -r -p "Remove local EasyVideoDL scripts and docs in the current folder (README, LICENSE, install/uninstall scripts, helpers)? (y/n) " ans_files
 if [[ "$ans_files" =~ ^[yY]$ ]]; then
-  rm -f ./hf-dl.sh ./hf-dl-win.ps1 || true
-  rm -f ./install-mac.sh ./uninstall-mac.sh || true
-  rm -f ./install-win.ps1 ./uninstall-win.ps1 || true
+  rm -f ./run-evd.sh ./run-evd.ps1 || true
+  rm -f ./install-evd.sh ./uninstall-evd.sh || true
+  rm -f ./install-evd.ps1 ./uninstall-evd.ps1 || true
   rm -f ./README.md ./LICENSE || true
   rm -rf ./images || true
   echo "Removed EasyVideoDL scripts and documentation files in the current folder (if present)."
