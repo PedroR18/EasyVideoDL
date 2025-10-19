@@ -10,6 +10,7 @@
 ---
 
 ## 📖 **Table of Contents**
+
 1. 🎬 What Is EasyVideoDL?  
 2. ⚡ Quick Start Summary (for Experienced Users)  
 3. ⚙️ Installation  
@@ -110,6 +111,7 @@ winget install Gyan.FFmpeg
 Many course platforms protect videos behind a login. **yt-dlp** needs your **session cookies** to access those videos on your behalf.
 
 **Recommended extension:** **Get cookies.txt LOCALLY**  
+
 - **Why this one?** It exports cookies **from your browser profile**, locally, without cloud syncing.  
 - **Where to get it:**  
   - Chrome / Edge: Chrome Web Store (search for “Get cookies.txt LOCALLY”).  
@@ -188,23 +190,29 @@ yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best" \
 ### **8. 🧩 Troubleshooting & Common Issues**
 
 #### ⚠️ Two files (video-only and audio-only)
+
 Install `ffmpeg` and re-run. You can also force merge:
+
 ```bash
 yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 "URL"
 ```
 
 #### 🔐 PowerShell: “script is not digitally signed”
+
 ```powershell
 Unblock-File -Path .\run-evd.ps1
 ```
 
 #### 🔄 Cookies expired or login required
+
 Re-export `cookies.txt` after logging in again (use **Get cookies.txt LOCALLY**).
 
 #### 🟨 Yellow ExecutionPolicy message (“controlled by a higher-precedence scope”)
+
 This is **normal and safe**. It simply means another policy is already in effect (often `Bypass`). EasyVideoDL will still run.
 
 #### 🧩 ffmpeg not recognized (Windows)
+
 Windows PATH may not have refreshed. Try:
 
 ```powershell
@@ -217,6 +225,7 @@ ffmpeg -version
 ```
 
 Or add the folder permanently:
+
 ```powershell
 $ffbin = Split-Path -Parent (Get-Command ffmpeg).Source
 $u = [System.Environment]::GetEnvironmentVariable('Path','User')
