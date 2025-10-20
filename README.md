@@ -145,7 +145,7 @@ If both commands print version numbers, your setup is correct.
 
 ### **4. 🍪 Installation Required for Login-Protected Sites: Browser Cookie Extension**
 
-Many platforms protect their videos behind a login. Since **yt-dlp** (the tool that EasyVideoDL uses for downloads) needs your **session cookies** to access those videos on your behalf, you need a tool that will keep track of your session cookies and make them available to yt-dlp. This is why you need to install a relevant extension in your web browser.
+Many platforms protect their videos behind a login. Since **yt-dlp** (the engine that EasyVideoDL uses for downloads) needs your **session cookies** to access those videos on your behalf, you need a tool that will keep track of your session cookies and make them available to yt-dlp. This is why you need to install a relevant extension in your web browser.
 
 **Recommended browser extension:** **Get cookies.txt LOCALLY**  
 
