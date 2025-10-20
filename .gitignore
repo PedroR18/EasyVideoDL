@@ -11,8 +11,10 @@ Thumbs.db
 venv/
 .env/
 
-# Logs
+# Various file types
+*.tmp
 *.log
+*cookies.txt
 
 # Editors
 .vscode/
