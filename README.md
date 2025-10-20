@@ -1,9 +1,9 @@
 # EasyVideoDL
 
-**Platform:** macOS | Windows 
-**License:** MIT 
-**Tool:** yt-dlp 
-**Scripts:** Bash | PowerShell 
+**Platform:** macOS | Windows  
+**License:** MIT  
+**Tool:** yt-dlp  
+**Scripts:** Bash | PowerShell  
 
 **Created by Aco Vidovic with AI assistance from ChatGPT**  
 
@@ -28,7 +28,7 @@
 
 ### **1. 🎬 What Is EasyVideoDL?**
 
-**EasyVideoDL** is a simple, cross-platform tool (for **macOS** and **Windows**) that helps you download videos — even from **login-protected websites** — using the powerful open-source engine [yt-dlp](https://github.com/yt-dlp/yt-dlp).  
+**EasyVideoDL** is a simple, cross-platform tool (for **macOS** and **Windows**) that helps you download videos — even from **login-protected websites** — using the powerful open-source engine [yt-dlp](https://github.com/yt-dlp/yt-dlp).  The name EasyVideoDL is a shorter version of Easy Video Downloader.
 
 It automates complex terminal commands into an easy guided process. Whether you're downloading a single lecture or an entire online course, EasyVideoDL ensures high-quality audio + video merging with minimal effort.
 
@@ -37,6 +37,8 @@ It automates complex terminal commands into an easy guided process. Whether you'
 ---
 
 ### **2. ⚡ Quick Start Summary (for Experienced Users)**
+
+Once you installed **EasyVideoDL**, you run it using the commands in your computer's terminnal: 
 
 ```bash
 # macOS
@@ -88,7 +90,7 @@ This installs **yt-dlp** and **ffmpeg** via `winget`, sets PowerShell execution 
 
 #### **3.2 🧰 Manual Installation (Alternative)**
 
-> ⚠️ **Do this only if you skipped the Automatic Installation** or prefer to install tools manually.
+> ⚠️ **Do this only if you skipped Automatic Installation** or prefer to install tools manually.
 
 ##### macOS
 
@@ -104,49 +106,70 @@ winget install yt-dlp.yt-dlp
 winget install Gyan.FFmpeg
 ```
 
+Once installed, you can verify the tools with:
+
+```bash
+# macOS or Linux terminal
+yt-dlp --version
+ffmpeg -version
+```
+
+```powershell
+# Windows PowerShell
+yt-dlp --version
+ffmpeg -version
+```
+
+If both commands print version numbers, your setup is correct.
+
 ---
 
 ### **4. 🍪 Browser Cookie Extension (Required for Login-Protected Sites)**
 
 Many course platforms protect videos behind a login. **yt-dlp** needs your **session cookies** to access those videos on your behalf.
 
-**Recommended extension:** **Get cookies.txt LOCALLY**  
+**Recommended browser extension:** **Get cookies.txt LOCALLY**  
 
-- **Why this one?** It exports cookies **from your browser profile**, locally, without cloud syncing.  
+- **Why this one?** It exports cookies **directly from your browser**, locally, without cloud syncing or third-party servers.  
 - **Where to get it:**  
-  - Chrome / Edge: Chrome Web Store (search for “Get cookies.txt LOCALLY”).  
-  - Firefox: Add-ons site (same name).  
+  - For Chrome / Edge → Chrome Web Store (search for “Get cookies.txt LOCALLY”)  
+  - For Firefox → Add-ons site (same name)  
 - **How to use it:**  
-  1. **Log in** to the site and open the page with the video (make sure you can play it in the browser).  
-  2. Click the 🍪 extension and choose **Export/Download** for the current site.  
-  3. Save as `cookies.txt` (for example, in your **Downloads** folder).  
-- **Keep it private:** `cookies.txt` contains session tokens. Do **not** share it or commit it to Git.
+  1. **Log in** to the site and open the video page (ensure it plays in browser).  
+  2. Click the 🍪 extension icon → **Export/Download cookies for this site**.  
+  3. Save the file as `cookies.txt` (typically in your **Downloads** folder).  
+- **Keep it private:** `cookies.txt` contains your login tokens — never share it or upload it to GitHub.
 
 ---
 
 ### **5. ▶️ Running EasyVideoDL**
 
-```bash
-# macOS
-./run-evd.sh
+##### macOS
 
-# Windows (PowerShell)
+```bash
+chmod +x ./run-evd.sh
+./run-evd.sh
+```
+
+##### Windows (PowerShell)
+
+```powershell
 .\run-evd.ps1
 ```
 
-When you run the helper, it prompts for:
+When you run the helper, it will prompt for:
 
 1. **Video or Playlist URL**  
 2. **Cookies file** (`cookies.txt`)  
 3. **Output folder**  
 4. **Playlist or single video**  
 
-The helpers will download the video(s), merge audio + video via `ffmpeg`, and organize files under:
+The helpers download the video(s), merge audio + video via `ffmpeg`, and organize files neatly under:
 
 ```
 ~/Downloads/EasyVideoDL/
   ├─ <Course Title>/
-  │   ├─ 001 - Intro.mp4
+  │   ├─ 001 – Intro.mp4
   │   └─ ...
   └─ Single Video.mp4
 ```
@@ -168,7 +191,7 @@ chmod +x ./uninstall-evd.sh
 .\uninstall-evd.ps1
 ```
 
-Each uninstaller can optionally remove tools (Homebrew/winget installs), local project files, and the `~/Downloads/EasyVideoDL` folder.
+Each uninstaller can optionally remove tools (Homebrew / winget installs), local project files, and the `~/Downloads/EasyVideoDL` folder.
 
 ---
 
@@ -189,34 +212,53 @@ yt-dlp --cookies cookies.txt --yes-playlist -f "bestvideo+bestaudio/best" \
 
 ### **8. 🧩 Troubleshooting & Common Issues**
 
-#### ⚠️ Two files (video-only and audio-only)
+#### ⚠️ Two separate files (video-only and audio-only)
 
-Install `ffmpeg` and re-run. You can also force merge:
+**Symptom:** You find two MP4 files with the same name — one plays video with no sound, the other has audio only.  
+
+**Cause:** `ffmpeg` was missing or not detected, so yt-dlp could not merge the streams.  
+
+**Fix:** Install or re-install `ffmpeg` and rerun the download.  
+You can also force merge manually:
 
 ```bash
 yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 "URL"
 ```
 
-#### 🔐 PowerShell: “script is not digitally signed”
+---
+
+#### 🔐 PowerShell warning: “script is not digitally signed”
+
+**Symptom:** When running a `.ps1` file, PowerShell refuses to execute it and shows a red error.  
+**Cause:** Windows marks downloaded `.ps1` files as untrusted by default.  
+**Fix:** Unblock the file once — this marks it as safe for future runs.
 
 ```powershell
 Unblock-File -Path .\run-evd.ps1
 ```
 
+---
+
 #### 🔄 Cookies expired or login required
 
 Re-export `cookies.txt` after logging in again (use **Get cookies.txt LOCALLY**).
 
+---
+
 #### 🟨 Yellow ExecutionPolicy message (“controlled by a higher-precedence scope”)
 
-This is **normal and safe**. It simply means another policy is already in effect (often `Bypass`). EasyVideoDL will still run.
+This is **normal and safe**. It means your system already has a policy (e.g. `Bypass`) set at a higher scope.  
+EasyVideoDL still runs without issues.
+
+---
 
 #### 🧩 ffmpeg not recognized (Windows)
 
-Windows PATH may not have refreshed. Try:
+If `ffmpeg -version` fails after install, your PATH might not have refreshed.  
+Try this in PowerShell:
 
 ```powershell
-# Refresh PATH in current window
+# Refresh PATH for current session
 $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' +
             [System.Environment]::GetEnvironmentVariable('Path','User')
 $wingetLinks = Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Links'
@@ -232,14 +274,14 @@ $u = [System.Environment]::GetEnvironmentVariable('Path','User')
 setx PATH "$u;$ffbin"
 ```
 
-> The Windows helper (`run-evd.ps1`) will auto-detect `ffmpeg` and pass `--ffmpeg-location` when needed.
+> The Windows helper (`run-evd.ps1`) automatically detects ffmpeg and adds `--ffmpeg-location` when needed.
 
 ---
 
 ### **9. 📚 Official Resources**
 
-- yt-dlp GitHub repo: https://github.com/yt-dlp/yt-dlp  
-- ffmpeg Docs: https://ffmpeg.org/documentation.html
+- yt-dlp GitHub repo → <https://github.com/yt-dlp/yt-dlp>  
+- ffmpeg Documentation → <https://ffmpeg.org/documentation.html>
 
 ---
 
